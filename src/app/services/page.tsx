@@ -4,6 +4,9 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
 export default async function ServicesPage() {
     let services: any[] = [];
 

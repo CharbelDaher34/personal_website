@@ -2,6 +2,9 @@ import { client } from "@/lib/sanityClient";
 import { projectsQuery } from "@/lib/queries";
 import { ProjectCard } from "@/components/ProjectCard";
 
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
 export default async function ProjectsPage() {
     let projects: any[] = [];
 

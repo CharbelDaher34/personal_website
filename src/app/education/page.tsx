@@ -5,6 +5,9 @@ import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
 export default async function EducationPage() {
     let education: any[] = [];
 

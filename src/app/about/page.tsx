@@ -6,6 +6,9 @@ import { client } from "@/lib/sanityClient";
 import { aboutQuery } from "@/lib/queries";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
 export default async function AboutPage() {
     let about = null;
 
