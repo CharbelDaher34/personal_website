@@ -7,7 +7,13 @@ import { aboutQuery } from "@/lib/queries";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 
 export default async function AboutPage() {
-    const about = await client.fetch(aboutQuery);
+    let about = null;
+
+    try {
+        about = await client.fetch(aboutQuery);
+    } catch (error) {
+        console.error('Error fetching about data:', error);
+    }
 
     if (!about) {
         return (
