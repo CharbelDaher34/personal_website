@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+A modern, responsive personal portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Sanity CMS.
 
-First, run the development server:
+## ✨ Features
 
+- **Modern Design**: Beautiful, responsive design with vibrant colors and smooth animations
+- **CMS-Powered**: Easy content management with Sanity CMS (currently uses mock data)
+- **Fully Responsive**: Works perfectly on all devices
+- **Dark Mode Ready**: Includes dark mode support
+- **SEO Optimized**: Proper meta tags and semantic HTML
+- **Type Safe**: Built with TypeScript for reliability
+
+## 📄 Pages
+
+- **Home**: Landing page with featured projects
+- **About**: Personal introduction and bio
+- **Experience**: Work experience timeline
+- **Education**: Educational background
+- **Projects**: Portfolio of projects with detailed pages
+- **Services**: Services offered with pricing
+- **Contact**: Contact form and information
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd persoanl
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **CMS**: [Sanity](https://www.sanity.io/) (optional)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Markdown**: [react-markdown](https://github.com/remarkjs/react-markdown)
+- **Carousel**: [react-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+/
+├── src/
+│   ├── app/                    # Next.js app router pages
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── education/
+│   │   ├── experience/
+│   │   ├── projects/
+│   │   │   └── [slug]/        # Dynamic project pages
+│   │   ├── services/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx           # Home page
+│   │   └── globals.css
+│   ├── components/            # Reusable components
+│   │   ├── ui/               # shadcn components
+│   │   ├── Footer.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── ProjectCard.tsx
+│   │   ├── ServiceCard.tsx
+│   │   └── MarkdownRenderer.tsx
+│   └── lib/                   # Utilities
+│       ├── mockData.ts        # Mock data for development
+│       ├── queries.ts         # Sanity queries
+│       ├── sanityClient.ts    # Sanity client setup
+│       └── utils.ts
+├── public/                    # Static assets
+└── package.json
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Using Mock Data (Current Setup)
+
+The site currently uses mock data from `src/lib/mockData.ts`. You can edit this file to customize:
+- About section content
+- Work experience
+- Education
+- Projects
+- Services
+
+### Connecting to Sanity CMS
+
+To use real CMS data:
+
+1. Create a Sanity project at [sanity.io](https://www.sanity.io/)
+2. Set up your Sanity schema based on the data models in the requirements
+3. Update `.env.local` with your Sanity credentials
+4. Replace mock data imports with actual Sanity queries
+
+### Styling
+
+- **Colors**: Edit `src/app/globals.css` to change the color scheme
+- **Components**: Modify components in `src/components/`
+- **Layout**: Update `src/app/layout.tsx` for global layout changes
+
+## 📝 Content Management
+
+### Data Models
+
+Each section uses the following data structure:
+
+**About**
+- title, bio (markdown), profile_photo, cv_url
+
+**Experience**
+- job_title, company, start_date, end_date, description (markdown), achievements, logo
+
+**Education**
+- degree, university, start_date, end_date, description (markdown), logo
+
+**Projects**
+- title, slug, short_summary, description (markdown), project_url, tech_stack, images, video_url, featured
+
+**Services**
+- title, tagline, description (markdown), icon, price_range
+
+## 🚢 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import the repository in [Vercel](https://vercel.com)
+3. Add environment variables
+4. Deploy!
+
+### Other Platforms
+
+The site can be deployed on any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- Render
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 👤 Author
+
+**Alex Doe**
+- Website: [your-website.com](https://your-website.com)
+- GitHub: [@yourusername](https://github.com/yourusername)
+
+---
+
+Built with ❤️ using Next.js and Tailwind CSS
