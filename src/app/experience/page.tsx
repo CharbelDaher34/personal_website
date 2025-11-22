@@ -16,7 +16,22 @@ interface ExperienceJob {
 }
 
 export default async function ExperiencePage() {
-    const experience: ExperienceJob[] = await client.fetch(experienceQuery);
+    let experience: ExperienceJob[] = [];
+
+    try {
+        experience = await client.fetch(experienceQuery);
+    } catch (error) {
+        console.error('Error fetching experience:', error);
+    }
+
+    if (!experience || experience.length === 0) {
+        return (
+            <div className="container py-12 md:py-24 text-center">
+                <h1 className="text-4xl font-bold tracking-tight mb-4">Work Experience</h1>
+                <p className="text-muted-foreground">No experience entries found. Add some in Sanity Studio!</p>
+            </div>
+        );
+    }
 
     return (
         <div className="container py-12 md:py-24">
