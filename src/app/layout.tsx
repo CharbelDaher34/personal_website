@@ -7,8 +7,8 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Alex Doe - Full Stack Developer",
-  description: "Portfolio of Alex Doe, a Full Stack Developer specializing in Next.js and React.",
+  title: "Charbel Daher - AI Engineer",
+  description: "Portfolio of Charbel Daher, an AI Engineer specializing in LLMs and Agentic AI.",
 };
 
 export default function RootLayout({

@@ -1,18 +1,8 @@
-import { client } from "@/lib/sanityClient";
-import { projectsQuery } from "@/lib/queries";
-import { ProjectCard } from "@/components/ProjectCard";
+import portfolioData from "@/data/portfolio.json";
+import { ProjectsList } from "@/components/ProjectsList";
 
-// Revalidate every 60 seconds
-export const revalidate = 60;
-
-export default async function ProjectsPage() {
-    let projects: any[] = [];
-
-    try {
-        projects = await client.fetch(projectsQuery);
-    } catch (error) {
-        console.error('Error fetching projects:', error);
-    }
+export default function ProjectsPage() {
+    const projects = portfolioData.projects;
 
     return (
         <div className="container py-12 md:py-24">
@@ -24,14 +14,10 @@ export default async function ProjectsPage() {
             </div>
 
             {projects && projects.length > 0 ? (
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {projects.map((project: any) => (
-                        <ProjectCard key={project.slug.current} project={project} />
-                    ))}
-                </div>
+                <ProjectsList projects={projects} />
             ) : (
                 <div className="text-center py-12">
-                    <p className="text-muted-foreground">No projects found. Add some in Sanity Studio!</p>
+                    <p className="text-muted-foreground">No projects found.</p>
                 </div>
             )}
         </div>

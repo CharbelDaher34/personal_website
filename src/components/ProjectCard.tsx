@@ -5,13 +5,7 @@ import { Badge } from "@/components/ui/badge"; // I need to add badge component 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-interface Project {
-    title: string;
-    slug: { current: string };
-    short_summary: string;
-    images?: string[];
-    tech_stack: string[];
-}
+import { Project } from "@/types/portfolio";
 
 export function ProjectCard({ project }: { project: Project }) {
     return (

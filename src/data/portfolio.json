@@ -1,0 +1,140 @@
+{
+    "personalInfo": {
+        "name": "Charbel Daher",
+        "email": "charbeldaher34@gmail.com",
+        "phone": "+96170435237",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "role": "AI Engineer",
+        "bio": "I'm Charbel Daher, an AI Engineer. I build accessible, pixel-perfect, performant, and web experiences.",
+        "location": "Beirut, Lebanon",
+        "profile_photo": "/images/profile.jpg",
+        "cv_url": "/cv.pdf"
+    },
+    "education": [
+        {
+            "school": "Lebanese University - Faculty of Engineering II",
+            "degree": "Bachelors in Computer and telecommunication Engineering",
+            "location": "Roumieh, Lebanon",
+            "startDate": "October 2020",
+            "endDate": "Present"
+        }
+    ],
+    "experience": [
+        {
+            "job_title": "AI Engineer",
+            "company": "Eurisko",
+            "location": "Adma, Lebanon",
+            "start_date": "October 2024",
+            "end_date": "Present",
+            "description": "Designed and deployed AI and agent-based applications using LLMs, PydanticAI, and custom logic for chatbots, document parsing, and task automation. Built backend services with FastAPI, SQLModel, and SQLAlchemy, integrated with MySQL, PostgreSQL, and Elasticsearch, and containerized deployments with Docker. Vibe coded many frontend (Typescript+React) apps using AI-assisted coding",
+            "logo": "/images/logos/eurisko.png"
+        },
+        {
+            "job_title": "AI and Computer Vision Internship",
+            "company": "Inmind.ai",
+            "location": "Mansourieh, Lebanon",
+            "start_date": "July 2024",
+            "end_date": "August 2024",
+            "description": "AI and Computer Vision internship covering machine learning, NLP, NVIDIA Omniverse, deep learning, GIT, docker, mlflow. For the final project, I trained yolov7 and created FCN for segmentation from scratch, wrote an Api and dockerize it",
+            "logo": "/images/logos/inmind.png"
+        },
+        {
+            "job_title": "AI and Data Analytics Academy",
+            "company": "Eurisko",
+            "location": "Adma, Lebanon",
+            "start_date": "July 2024",
+            "end_date": "August 2024",
+            "description": "Data analysis, machine learning, nlp, mlops, project lifecycle, agile. For the final project, I created a recipe recommendation app with an api and dockerize it.",
+            "logo": "/images/logos/eurisko.png"
+        },
+        {
+            "job_title": "AI Content Creator Internship",
+            "company": "Inatco",
+            "location": "Jdeideh, Lebanon",
+            "start_date": "November 2023",
+            "end_date": "January 2024",
+            "description": "I completed Microsoft AI-900 and AI-102 courses, focusing on Azure AI fundamentals and solutions, while also developing and ensuring high-quality AI courses, content, and labs.",
+            "logo": "/images/logos/inatco.png"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Elastic Query Builder (PydanticAI)",
+            "slug": {
+                "current": "elastic-query-builder"
+            },
+            "short_summary": "Built an AI-powered query builder that translates natural language inputs into Elasticsearch queries with minimal errors, enabling intuitive data exploration.",
+            "featured": true,
+            "tech_stack": [
+                "PydanticAI",
+                "Elasticsearch",
+                "AI"
+            ],
+            "images": [
+                "/images/projects/elastic-query-builder.png"
+            ],
+            "description": "Built an AI-powered query builder that translates natural language inputs into Elasticsearch queries with minimal errors, enabling intuitive data exploration.",
+            "project_url": "#"
+        },
+        {
+            "title": "Postgres Data Chat Agent (MCP + PydanticAI)",
+            "slug": {
+                "current": "postgres-data-chat-agent"
+            },
+            "short_summary": "Developed an intelligent agent that allows users to interact with PostgreSQL databases conversationally, retrieving and analyzing data through natural language queries.",
+            "featured": true,
+            "tech_stack": [
+                "MCP",
+                "PydanticAI",
+                "PostgreSQL"
+            ],
+            "images": [
+                "/images/projects/postgres-data-chat-agent.png"
+            ],
+            "description": "Developed an intelligent agent that allows users to interact with PostgreSQL databases conversationally, retrieving and analyzing data through natural language queries.",
+            "project_url": "#"
+        },
+        {
+            "title": "AI Prescreening Interview Agent",
+            "slug": {
+                "current": "ai-prescreening-interview-agent"
+            },
+            "short_summary": "Designed and implemented a graph-based AI agent that conducts automated prescreening interviews, assessing candidates’ responses for role alignment.",
+            "featured": true,
+            "tech_stack": [
+                "PydanticAI",
+                "Graph-Based Agents"
+            ],
+            "images": [
+                "/images/projects/ai-prescreening-interview-agent.png"
+            ],
+            "description": "Designed and implemented a graph-based AI agent that conducts automated prescreening interviews, assessing candidates’ responses for role alignment.",
+            "project_url": "#"
+        },
+        {
+            "title": "Document Parser (Docling)",
+            "slug": {
+                "current": "document-parser"
+            },
+            "short_summary": "Created a robust parser using Docling to process and structure unstructured documents, improving downstream data extraction and analysis pipelines.",
+            "featured": true,
+            "tech_stack": [
+                "Docling",
+                "Document Parsing"
+            ],
+            "images": [
+                "/images/projects/document-parser.png"
+            ],
+            "description": "Created a robust parser using Docling to process and structure unstructured documents, improving downstream data extraction and analysis pipelines.",
+            "project_url": "#"
+        }
+    ],
+    "certifications": [
+        {
+            "title": "IBM Full Stack Software Developer",
+            "date": "October 2023",
+            "issuer": "IBM"
+        }
+    ]
+}

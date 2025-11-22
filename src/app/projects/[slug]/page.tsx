@@ -1,13 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { client } from "@/lib/sanityClient";
-import { projectBySlugQuery } from "@/lib/queries";
+import portfolioData from "@/data/portfolio.json";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, ArrowLeft } from "lucide-react";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import { Project } from "@/types/portfolio";
 
 interface ProjectDetailPageProps {
     params: Promise<{
@@ -15,9 +14,15 @@ interface ProjectDetailPageProps {
     }>;
 }
 
+export async function generateStaticParams() {
+    return portfolioData.projects.map((project) => ({
+        slug: project.slug.current,
+    }));
+}
+
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     const { slug } = await params;
-    const project = await client.fetch(projectBySlugQuery, { slug });
+    const project = (portfolioData.projects as Project[]).find((p) => p.slug.current === slug);
 
     if (!project) {
         notFound();
@@ -37,7 +42,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                     <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>
                     <p className="text-xl text-muted-foreground">{project.short_summary}</p>
                     <div className="flex flex-wrap gap-2">
-                        {project.tech_stack.map((tech: string) => (
+                        {project.tech_stack.map((tech) => (
                             <Badge key={tech} variant="secondary">
                                 {tech}
                             </Badge>
@@ -77,9 +82,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 )}
 
                 {/* Description */}
-                <div className="prose prose-neutral dark:prose-invert max-w-none">
-                    <MarkdownRenderer content={project.description} />
-                </div>
+                {project.description && (
+                    <div className="prose prose-neutral dark:prose-invert max-w-none">
+                        <MarkdownRenderer content={project.description} />
+                    </div>
+                )}
             </div>
         </div>
     );

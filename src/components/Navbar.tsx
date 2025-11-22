@@ -12,7 +12,6 @@ const navItems = [
     { name: "About", href: "/about" },
     { name: "Experience", href: "/experience" },
     { name: "Projects", href: "/projects" },
-    { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -24,7 +23,7 @@ export function Navbar() {
         <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-16 items-center justify-between">
                 <Link href="/" className="mr-6 flex items-center space-x-2">
-                    <span className="text-xl font-bold">Alex Doe</span>
+                    <span className="text-xl font-bold">Charbel Daher</span>
                 </Link>
 
                 {/* Desktop Nav */}

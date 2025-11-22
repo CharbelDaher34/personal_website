@@ -7,8 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import portfolioData from "@/data/portfolio.json";
 
 export default function ContactPage() {
+    const { email, phone, location } = portfolioData.personalInfo;
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -58,7 +60,7 @@ export default function ContactPage() {
                                     <Mail className="h-5 w-5 text-primary" />
                                 </div>
                                 <CardTitle className="text-lg">Email</CardTitle>
-                                <CardDescription>alex@example.com</CardDescription>
+                                <CardDescription>{email}</CardDescription>
                             </CardHeader>
                         </Card>
 
@@ -68,7 +70,7 @@ export default function ContactPage() {
                                     <Phone className="h-5 w-5 text-primary" />
                                 </div>
                                 <CardTitle className="text-lg">Phone</CardTitle>
-                                <CardDescription>+1 (555) 123-4567</CardDescription>
+                                <CardDescription>{phone}</CardDescription>
                             </CardHeader>
                         </Card>
 
@@ -78,7 +80,7 @@ export default function ContactPage() {
                                     <MapPin className="h-5 w-5 text-primary" />
                                 </div>
                                 <CardTitle className="text-lg">Location</CardTitle>
-                                <CardDescription>San Francisco, CA</CardDescription>
+                                <CardDescription>{location}</CardDescription>
                             </CardHeader>
                         </Card>
                     </div>
