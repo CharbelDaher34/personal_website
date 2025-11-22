@@ -9,7 +9,7 @@ interface Project {
     title: string;
     slug: { current: string };
     short_summary: string;
-    images: string[];
+    images?: string[];
     tech_stack: string[];
 }
 
@@ -18,7 +18,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <Card className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
             <div className="relative h-48 w-full">
                 <Image
-                    src={project.images[0]}
+                    src={project.images?.[0] || '/placeholder.jpg'}
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-300 hover:scale-105"

@@ -5,9 +5,18 @@ import { client } from "@/lib/sanityClient";
 import { projectsQuery } from "@/lib/queries";
 import { ProjectCard } from "@/components/ProjectCard";
 
+interface Project {
+  title: string;
+  slug: { current: string };
+  short_summary: string;
+  featured: boolean;
+  images?: string[];
+  tech_stack: string[];
+}
+
 export default async function Home() {
-  const allProjects = await client.fetch(projectsQuery);
-  const featuredProjects = allProjects.filter((p: any) => p.featured);
+  const allProjects: Project[] = await client.fetch(projectsQuery);
+  const featuredProjects = allProjects.filter((p: Project) => p.featured);
 
 
   return (
@@ -56,7 +65,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects.map((project) => (
+            {featuredProjects.map((project: Project) => (
               <ProjectCard key={project.slug.current} project={project} />
             ))}
           </div>
