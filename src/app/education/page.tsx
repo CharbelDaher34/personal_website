@@ -6,7 +6,22 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 export default async function EducationPage() {
-    const education = await client.fetch(educationQuery);
+    let education: any[] = [];
+
+    try {
+        education = await client.fetch(educationQuery);
+    } catch (error) {
+        console.error('Error fetching education:', error);
+    }
+
+    if (!education || education.length === 0) {
+        return (
+            <div className="container py-12 md:py-24 text-center">
+                <h1 className="text-4xl font-bold tracking-tight mb-4">Education</h1>
+                <p className="text-muted-foreground">No education entries found. Add some in Sanity Studio!</p>
+            </div>
+        );
+    }
 
     return (
         <div className="container py-12 md:py-24">
