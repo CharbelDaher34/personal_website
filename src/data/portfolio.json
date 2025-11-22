@@ -9,7 +9,7 @@
         "bio": "I'm Charbel Daher, an AI Engineer. I build accessible, pixel-perfect, performant, and web experiences.",
         "location": "Beirut, Lebanon",
         "profile_photo": "/images/profile.jpg",
-        "cv_url": "/cv.pdf"
+        "cv_url": "/cv.pd`f"
     },
     "education": [
         {
@@ -17,7 +17,7 @@
             "degree": "Bachelors in Computer and telecommunication Engineering",
             "location": "Roumieh, Lebanon",
             "startDate": "October 2020",
-            "endDate": "Present"
+            "endDate": "July 2025"
         }
     ],
     "experience": [
