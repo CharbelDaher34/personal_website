@@ -26,9 +26,9 @@ export default function AboutPage() {
                     {about.cv_url && (
                         <div className="flex gap-4">
                             <Button asChild>
-                                <Link href={about.cv_url} target="_blank">
+                                <a href={about.cv_url} download="Charbel_Daher_CV.pdf">
                                     <Download className="mr-2 h-4 w-4" /> Download CV
-                                </Link>
+                                </a>
                             </Button>
                         </div>
                     )}

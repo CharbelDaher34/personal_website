@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import portfolioData from "@/data/portfolio.json";
 
 export function HeroSection() {
+  const { github, linkedin, email } = portfolioData.personalInfo;
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Gradients */}
@@ -68,13 +70,13 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="flex items-center gap-6 pt-8 text-muted-foreground"
           >
-            <Link href="https://github.com" target="_blank" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
+            <Link href={github} target="_blank" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
               <Github className="h-6 w-6" />
             </Link>
-            <Link href="https://linkedin.com" target="_blank" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
+            <Link href={linkedin} target="_blank" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
               <Linkedin className="h-6 w-6" />
             </Link>
-            <Link href="mailto:charbeldaher34@gmail.com" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
+            <Link href={`mailto:${email}`} className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
               <Mail className="h-6 w-6" />
             </Link>
           </motion.div>

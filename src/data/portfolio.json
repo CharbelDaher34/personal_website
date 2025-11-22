@@ -3,13 +3,13 @@
         "name": "Charbel Daher",
         "email": "charbeldaher34@gmail.com",
         "phone": "+96170435237",
-        "linkedin": "LinkedIn",
-        "github": "GitHub",
+        "linkedin": "https://www.linkedin.com/in/charbeldaher34/",
+        "github": "https://github.com/CharbelDaher34",
         "role": "AI Engineer",
         "bio": "I'm Charbel Daher, an AI Engineer. I build accessible, pixel-perfect, performant, and web experiences.",
         "location": "Beirut, Lebanon",
         "profile_photo": "/images/profile.jpg",
-        "cv_url": "/cv.pd`f"
+        "cv_url": "/cv.pdf"
     },
     "education": [
         {
@@ -60,74 +60,151 @@
     ],
     "projects": [
         {
-            "title": "Elastic Query Builder (PydanticAI)",
+            "title": "Personal Website",
+            "slug": {
+                "current": "personal-website"
+            },
+            "short_summary": "My personal portfolio website showcasing projects, experience, and skills as an AI Engineer.",
+            "featured": true,
+            "tech_stack": [
+                "TypeScript",
+                "React",
+                "Next.js"
+            ],
+            "images": [
+                "/images/projects/personal-website.png"
+            ],
+            "description": "My personal portfolio website showcasing projects, experience, and skills as an AI Engineer.",
+            "project_url": "https://github.com/CharbelDaher34/personal_website"
+        },
+        {
+            "title": "WhatsApp Agent",
+            "slug": {
+                "current": "whatsapp-agent"
+            },
+            "short_summary": "An intelligent WhatsApp bot powered by AI for automated messaging and interactions.",
+            "featured": true,
+            "tech_stack": [
+                "Python",
+                "AI",
+                "WhatsApp API"
+            ],
+            "images": [
+                "/images/projects/whatsapp-agent.png"
+            ],
+            "description": "An intelligent WhatsApp bot powered by AI for automated messaging and interactions.",
+            "project_url": "https://github.com/CharbelDaher34/whatsapp_agent"
+        },
+        {
+            "title": "Tennis Analyzer",
+            "slug": {
+                "current": "tennis-analyzer"
+            },
+            "short_summary": "Computer vision application for analyzing tennis matches, tracking players and ball movements.",
+            "featured": true,
+            "tech_stack": [
+                "Python",
+                "Computer Vision",
+                "Deep Learning"
+            ],
+            "images": [
+                "/images/projects/tennis-analyzer.png"
+            ],
+            "description": "Computer vision application for analyzing tennis matches, tracking players and ball movements.",
+            "project_url": "https://github.com/CharbelDaher34/tennis_analyzer"
+        },
+        {
+            "title": "ANIP",
+            "slug": {
+                "current": "anip"
+            },
+            "short_summary": "Advanced AI project with 4 stars on GitHub, implementing cutting-edge machine learning techniques.",
+            "featured": true,
+            "tech_stack": [
+                "Python",
+                "Machine Learning",
+                "AI"
+            ],
+            "images": [
+                "/images/projects/anip.png"
+            ],
+            "description": "Advanced AI project with 4 stars on GitHub, implementing cutting-edge machine learning techniques.",
+            "project_url": "https://github.com/CharbelDaher34/ANIP"
+        },
+        {
+            "title": "Elastic Query Builder",
             "slug": {
                 "current": "elastic-query-builder"
             },
-            "short_summary": "Built an AI-powered query builder that translates natural language inputs into Elasticsearch queries with minimal errors, enabling intuitive data exploration.",
+            "short_summary": "AI-powered tool that converts natural language prompts into Elasticsearch queries.",
             "featured": true,
             "tech_stack": [
-                "PydanticAI",
+                "Python",
                 "Elasticsearch",
                 "AI"
             ],
             "images": [
                 "/images/projects/elastic-query-builder.png"
             ],
-            "description": "Built an AI-powered query builder that translates natural language inputs into Elasticsearch queries with minimal errors, enabling intuitive data exploration.",
-            "project_url": "#"
+            "description": "AI-powered tool that converts natural language prompts into Elasticsearch queries.",
+            "project_url": "https://github.com/CharbelDaher34/elastic-query-builder"
         },
         {
-            "title": "Postgres Data Chat Agent (MCP + PydanticAI)",
+            "title": "NER Finetuning",
             "slug": {
-                "current": "postgres-data-chat-agent"
+                "current": "ner-finetuning"
             },
-            "short_summary": "Developed an intelligent agent that allows users to interact with PostgreSQL databases conversationally, retrieving and analyzing data through natural language queries.",
+            "short_summary": "Named Entity Recognition model fine-tuning for custom NLP tasks and domain-specific entity extraction.",
             "featured": true,
             "tech_stack": [
-                "MCP",
+                "Python",
+                "NLP",
+                "Transformers"
+            ],
+            "images": [
+                "/images/projects/ner-finetuning.png"
+            ],
+            "description": "Named Entity Recognition model fine-tuning for custom NLP tasks and domain-specific entity extraction.",
+            "project_url": "https://github.com/CharbelDaher34/NER-Finetuning"
+        },
+        {
+            "title": "Jarvis - AI Voice Assistant",
+            "slug": {
+                "current": "jarvis"
+            },
+            "short_summary": "Intelligent voice assistant with web automation, Gmail integration, and multi-tool orchestration using Playwright and PydanticAI.",
+            "featured": true,
+            "tech_stack": [
+                "Python",
                 "PydanticAI",
-                "PostgreSQL"
+                "Playwright",
+                "Voice Recognition",
+                "GPT-4"
             ],
             "images": [
-                "/images/projects/postgres-data-chat-agent.png"
+                "/images/projects/jarvis.png"
             ],
-            "description": "Developed an intelligent agent that allows users to interact with PostgreSQL databases conversationally, retrieving and analyzing data through natural language queries.",
-            "project_url": "#"
+            "description": "Advanced AI voice assistant featuring intelligent web automation with vision capabilities, Gmail integration, multi-tool orchestration, and natural language processing. Built with Playwright for browser automation, Whisper for speech-to-text, and PydanticAI for intelligent tool routing.",
+            "project_url": "https://github.com/CharbelDaher34/jarvis"
         },
         {
-            "title": "AI Prescreening Interview Agent",
+            "title": "Hair AI",
             "slug": {
-                "current": "ai-prescreening-interview-agent"
+                "current": "hair-ai"
             },
-            "short_summary": "Designed and implemented a graph-based AI agent that conducts automated prescreening interviews, assessing candidates’ responses for role alignment.",
+            "short_summary": "AI-powered application for hair analysis and styling recommendations using computer vision and deep learning.",
             "featured": true,
             "tech_stack": [
-                "PydanticAI",
-                "Graph-Based Agents"
+                "Python",
+                "Computer Vision",
+                "Deep Learning",
+                "AI"
             ],
             "images": [
-                "/images/projects/ai-prescreening-interview-agent.png"
+                "/images/projects/hair-ai.png"
             ],
-            "description": "Designed and implemented a graph-based AI agent that conducts automated prescreening interviews, assessing candidates’ responses for role alignment.",
-            "project_url": "#"
-        },
-        {
-            "title": "Document Parser (Docling)",
-            "slug": {
-                "current": "document-parser"
-            },
-            "short_summary": "Created a robust parser using Docling to process and structure unstructured documents, improving downstream data extraction and analysis pipelines.",
-            "featured": true,
-            "tech_stack": [
-                "Docling",
-                "Document Parsing"
-            ],
-            "images": [
-                "/images/projects/document-parser.png"
-            ],
-            "description": "Created a robust parser using Docling to process and structure unstructured documents, improving downstream data extraction and analysis pipelines.",
-            "project_url": "#"
+            "description": "AI-powered application for hair analysis and styling recommendations using computer vision and deep learning.",
+            "project_url": "https://github.com/CharbelDaher34/hair-AI"
         }
     ],
     "certifications": [
