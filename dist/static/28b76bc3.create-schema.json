@@ -1,0 +1,443 @@
+[
+  {
+    "fields": [
+      {
+        "description": "Your name or greeting (e.g., \"Hi, I'm John Doe\")",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "description": "Your bio/introduction (supports Markdown)",
+        "name": "bio",
+        "type": "text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Full URL to your profile photo",
+        "name": "profile_photo",
+        "type": "url",
+        "title": "Profile Photo URL"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Link to your CV/Resume PDF",
+        "name": "cv_url",
+        "type": "url",
+        "title": "CV Download URL"
+      }
+    ],
+    "name": "about",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "job_title",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "company",
+        "type": "string"
+      },
+      {
+        "description": "e.g., \"2022-01\" or \"Jan 2022\"",
+        "name": "start_date",
+        "type": "string"
+      },
+      {
+        "description": "Leave empty or null for current position",
+        "name": "end_date",
+        "type": "string"
+      },
+      {
+        "description": "Job description (supports Markdown)",
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "achievements",
+        "type": "array",
+        "title": "Key Achievements"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "logo",
+        "type": "url",
+        "title": "Company Logo URL"
+      }
+    ],
+    "name": "experience",
+    "type": "document",
+    "title": "Work Experience"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "degree",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "university",
+        "type": "string",
+        "title": "University/School"
+      },
+      {
+        "description": "e.g., \"2015-09\" or \"Sep 2015\"",
+        "name": "start_date",
+        "type": "string"
+      },
+      {
+        "description": "e.g., \"2019-05\" or \"May 2019\"",
+        "name": "end_date",
+        "type": "string"
+      },
+      {
+        "description": "Education details (supports Markdown)",
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "logo",
+        "type": "url",
+        "title": "University Logo URL"
+      }
+    ],
+    "name": "education",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Project Title"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "description": "Brief one-line description",
+        "name": "short_summary",
+        "type": "string"
+      },
+      {
+        "description": "Detailed project description (supports Markdown)",
+        "name": "description",
+        "type": "text",
+        "title": "Full Description"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "GitHub, live demo, or project link",
+        "name": "project_url",
+        "type": "url",
+        "title": "Project URL"
+      },
+      {
+        "description": "e.g., [\"Next.js\", \"TypeScript\", \"Tailwind\"]",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "tech_stack",
+        "type": "array",
+        "title": "Technologies Used"
+      },
+      {
+        "description": "URLs of project screenshots/images",
+        "of": [
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "type": "url"
+          }
+        ],
+        "name": "images",
+        "type": "array",
+        "title": "Project Images"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "YouTube or video embed URL",
+        "name": "video_url",
+        "type": "url",
+        "title": "Video URL (Optional)"
+      },
+      {
+        "initialValue": false,
+        "description": "Show on homepage?",
+        "name": "featured",
+        "type": "boolean",
+        "title": "Featured Project"
+      }
+    ],
+    "name": "project",
+    "type": "document",
+    "title": "Projects"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Service Title"
+      },
+      {
+        "description": "Short catchy tagline",
+        "name": "tagline",
+        "type": "string"
+      },
+      {
+        "description": "Service details (supports Markdown)",
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "initialValue": "Code",
+        "description": "Lucide icon name (e.g., \"Code\", \"PenTool\", \"MessageSquare\")",
+        "name": "icon",
+        "type": "string",
+        "title": "Icon Name"
+      },
+      {
+        "description": "e.g., \"$1000 - $5000\" or \"$100/hr\"",
+        "name": "price_range",
+        "type": "string"
+      }
+    ],
+    "name": "service",
+    "type": "document",
+    "title": "Services"
+  }
+]
