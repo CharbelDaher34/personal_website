@@ -17,11 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
-        <div className="relative flex min-h-screen flex-col">
+    <html lang="en" className="scroll-smooth w-full" suppressHydrationWarning>
+      <body className={`${inter.className} w-full`} suppressHydrationWarning>
+        <div className="relative flex min-h-screen flex-col w-full">
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 w-full">{children}</main>
           <Footer />
         </div>
       </body>
