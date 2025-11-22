@@ -118,10 +118,18 @@
     @apply border-border outline-ring/50;
   }
 
+  html,
+  body {
+    @apply w-full;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
 
 /* Carousel Custom Styles */
 .project-carousel .carousel .slide {
