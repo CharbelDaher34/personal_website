@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function ProjectsList({ projects }: { projects: Project[] }) {
   return (
-    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
       {projects.map((project, index) => (
         <motion.div
           key={project.slug.current}

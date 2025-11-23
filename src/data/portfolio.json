@@ -8,7 +8,7 @@
         "role": "AI Engineer",
         "bio": "I'm Charbel Daher, an AI Engineer. I build accessible, pixel-perfect, performant, and web experiences.",
         "location": "Beirut, Lebanon",
-        "profile_photo": "/images/profile.jpg",
+        "profile_photo": "/images/profile.webp",
         "cv_url": "/cv.pdf"
     },
     "education": [
@@ -96,25 +96,7 @@
             "project_url": "https://github.com/CharbelDaher34/whatsapp_agent"
         },
         {
-            "title": "Tennis Analyzer",
-            "slug": {
-                "current": "tennis-analyzer"
-            },
-            "short_summary": "Computer vision application for analyzing tennis matches, tracking players and ball movements.",
-            "featured": true,
-            "tech_stack": [
-                "Python",
-                "Computer Vision",
-                "Deep Learning"
-            ],
-            "images": [
-                "/images/projects/tennis-analyzer.png"
-            ],
-            "description": "Computer vision application for analyzing tennis matches, tracking players and ball movements.",
-            "project_url": "https://github.com/CharbelDaher34/tennis_analyzer"
-        },
-        {
-            "title": "ANIP",
+            "title": "Automatic news intelligence pipeline",
             "slug": {
                 "current": "anip"
             },
@@ -209,9 +191,10 @@
     ],
     "certifications": [
         {
-            "title": "IBM Full Stack Software Developer",
-            "date": "October 2023",
-            "issuer": "IBM"
+            "name": "IBM Full Stack Software Developer",
+            "logo": "/images/logos/ibm.png",
+            "certificate_photo": "/images/certifications/ibm-fullstack.png",
+            "url": "https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer"
         }
     ]
 }

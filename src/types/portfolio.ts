@@ -30,9 +30,10 @@ export interface Education {
 }
 
 export interface Certification {
-    title: string;
-    date: string;
-    issuer: string;
+    name: string;
+    logo?: string;
+    certificate_photo?: string;
+    url?: string;
 }
 
 export interface PersonalInfo {

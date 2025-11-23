@@ -5,6 +5,7 @@ import { Download } from "lucide-react";
 import portfolioData from "@/data/portfolio.json";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 
+
 export default function AboutPage() {
     const about = portfolioData.personalInfo;
 

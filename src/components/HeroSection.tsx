@@ -70,15 +70,15 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="flex items-center gap-6 pt-8 text-muted-foreground"
           >
-            <Link href={github} target="_blank" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
+            <a href={github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
               <Github className="h-6 w-6" />
-            </Link>
-            <Link href={linkedin} target="_blank" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
+            </a>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
               <Linkedin className="h-6 w-6" />
-            </Link>
-            <Link href={`mailto:${email}`} className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
+            </a>
+            <a href={`mailto:${email}`} className="hover:text-primary transition-colors hover:scale-110 transform duration-200">
               <Mail className="h-6 w-6" />
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>

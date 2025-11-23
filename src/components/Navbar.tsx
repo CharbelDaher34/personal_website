@@ -13,6 +13,7 @@ const navItems = [
     { name: "About", href: "/about" },
     { name: "Experience", href: "/experience" },
     { name: "Projects", href: "/projects" },
+    { name: "Certifications", href: "/certifications" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -75,7 +76,7 @@ export function Navbar() {
 
                 <div className="hidden md:block">
                     <Button asChild size="sm" className="rounded-full px-6 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20">
-                        <Link href="/contact">Hire Me</Link>
+                        <Link href="/contact">Freelance Services</Link>
                     </Button>
                 </div>
 
@@ -115,7 +116,7 @@ export function Navbar() {
                                 </Link>
                             ))}
                             <Button asChild className="mt-2 w-full rounded-xl bg-primary hover:bg-primary/90">
-                                <Link href="/contact" onClick={() => setIsOpen(false)}>Hire Me</Link>
+                                <Link href="/contact" onClick={() => setIsOpen(false)}>Freelance Services</Link>
                             </Button>
                         </motion.div>
                     )}

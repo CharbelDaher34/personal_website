@@ -146,6 +146,11 @@
 }
 
 /* Custom Utilities */
+.container {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 1400px;
+}
+
 .glass-nav {
   @apply bg-background/60 backdrop-blur-xl border-b border-white/5 supports-[backdrop-filter]:bg-background/30;
 }
