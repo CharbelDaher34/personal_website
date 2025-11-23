@@ -14,7 +14,7 @@
     "education": [
         {
             "school": "Lebanese University - Faculty of Engineering II",
-            "degree": "Bachelors in Computer and telecommunication Engineering",
+            "degree": "Bachelors in Computer and communication Engineering",
             "location": "Roumieh, Lebanon",
             "startDate": "October 2020",
             "endDate": "July 2025"
@@ -65,7 +65,7 @@
                 "current": "personal-website"
             },
             "short_summary": "My personal portfolio website showcasing projects, experience, and skills as an AI Engineer.",
-            "featured": true,
+            "featured": false,
             "tech_stack": [
                 "TypeScript",
                 "React",
@@ -83,7 +83,7 @@
                 "current": "whatsapp-agent"
             },
             "short_summary": "An intelligent WhatsApp bot powered by AI for automated messaging and interactions.",
-            "featured": true,
+            "featured": false,
             "tech_stack": [
                 "Python",
                 "AI",
@@ -96,105 +96,179 @@
             "project_url": "https://github.com/CharbelDaher34/whatsapp_agent"
         },
         {
-            "title": "Automatic news intelligence pipeline",
+            "title": "ANIP - Automated News Intelligence Pipeline",
             "slug": {
                 "current": "anip"
             },
-            "short_summary": "Advanced AI project with 4 stars on GitHub, implementing cutting-edge machine learning techniques.",
+            "short_summary": "An end-to-end automated pipeline for collecting, processing, and analyzing news articles with machine learning.",
             "featured": true,
             "tech_stack": [
                 "Python",
-                "Machine Learning",
-                "AI"
+                "Apache Airflow",
+                "Apache Spark",
+                "PostgreSQL",
+                "MLflow",
+                "FastAPI",
+                "Docker"
             ],
             "images": [
                 "/images/projects/anip.png"
             ],
-            "description": "Advanced AI project with 4 stars on GitHub, implementing cutting-edge machine learning techniques.",
+            "description": "An end-to-end automated pipeline for collecting, processing, and analyzing news articles with machine learning. It features automated data ingestion from multiple sources, distributed ML processing with Spark, model management with MLflow, and a REST API with an AI agent for intelligent news search and analysis.",
             "project_url": "https://github.com/CharbelDaher34/ANIP"
         },
         {
-            "title": "Elastic Query Builder",
+            "title": "Structured DB Agnostic Query Builder",
             "slug": {
-                "current": "elastic-query-builder"
+                "current": "structured-db-agnostic-query-builder"
             },
-            "short_summary": "AI-powered tool that converts natural language prompts into Elasticsearch queries.",
-            "featured": true,
+            "short_summary": "A database-agnostic natural language query builder that converts natural language queries into structured database queries (MongoDB & Elasticsearch) using LLM-powered structured output.",
+            "featured": false,
             "tech_stack": [
                 "Python",
+                "OpenAI",
+                "Pydantic",
+                "MongoDB",
                 "Elasticsearch",
-                "AI"
+                "FastAPI"
             ],
             "images": [
                 "/images/projects/elastic-query-builder.png"
             ],
-            "description": "AI-powered tool that converts natural language prompts into Elasticsearch queries.",
-            "project_url": "https://github.com/CharbelDaher34/elastic-query-builder"
+            "description": "This project provides a clean, extensible architecture for converting natural language queries into database-specific query languages. It uses OpenAI's language models with structured Pydantic outputs to ensure type-safe query generation. Key features include database agnostic design, type-safe validation, LLM-powered query generation, and support for MongoDB and Elasticsearch.",
+            "project_url": "https://github.com/CharbelDaher34/structured-db-agnostic-query-builder"
         },
         {
-            "title": "NER Finetuning",
+            "title": "Modular Training Framework",
             "slug": {
-                "current": "ner-finetuning"
+                "current": "modular-training-framework"
             },
-            "short_summary": "Named Entity Recognition model fine-tuning for custom NLP tasks and domain-specific entity extraction.",
-            "featured": true,
+            "short_summary": "A clean, extensible training framework for fine-tuning language models on any task (NER, QA, Classification) using LoRA and PEFT.",
+            "featured": false,
             "tech_stack": [
                 "Python",
-                "NLP",
-                "Transformers"
+                "PyTorch",
+                "Transformers",
+                "PEFT",
+                "LoRA",
+                "WandB"
             ],
             "images": [
                 "/images/projects/ner-finetuning.png"
             ],
-            "description": "Named Entity Recognition model fine-tuning for custom NLP tasks and domain-specific entity extraction.",
+            "description": "A modular framework designed to adapt the same training pipeline to any task by implementing just DataProcessor and Evaluator components. Features automated GGUF conversion, LoRA fine-tuning, and support for tasks like NER, Question Answering, and Text Classification.",
             "project_url": "https://github.com/CharbelDaher34/NER-Finetuning"
         },
         {
-            "title": "Jarvis - AI Voice Assistant",
+            "title": "Jarvis Voice Assistant",
             "slug": {
                 "current": "jarvis"
             },
-            "short_summary": "Intelligent voice assistant with web automation, Gmail integration, and multi-tool orchestration using Playwright and PydanticAI.",
+            "short_summary": "A modular voice-controlled assistant with an extensible tool system powered by LLM-based intelligent routing.",
             "featured": true,
             "tech_stack": [
                 "Python",
-                "PydanticAI",
                 "Playwright",
-                "Voice Recognition",
-                "GPT-4"
+                "OpenAI",
+                "Whisper",
+                "PydanticAI",
+                "Gmail API"
             ],
             "images": [
                 "/images/projects/jarvis.png"
             ],
-            "description": "Advanced AI voice assistant featuring intelligent web automation with vision capabilities, Gmail integration, multi-tool orchestration, and natural language processing. Built with Playwright for browser automation, Whisper for speech-to-text, and PydanticAI for intelligent tool routing.",
+            "description": "A modular voice-controlled assistant featuring continuous listening, intelligent tool routing, and parallel execution. It includes a powerful Playwright agent for web automation with vision capabilities, Gmail integration, and a multi-engine search tool. The system uses LLMs to automatically select and execute the best tools for any given task.",
             "project_url": "https://github.com/CharbelDaher34/jarvis"
         },
         {
-            "title": "Hair AI",
+            "title": "HAIR – Human AI Resources",
             "slug": {
                 "current": "hair-ai"
             },
-            "short_summary": "AI-powered application for hair analysis and styling recommendations using computer vision and deep learning.",
+            "short_summary": "An AI-powered recruitment platform designed to modernize and streamline the hiring process using LLMs, semantic search, and multi-agent systems.",
             "featured": true,
             "tech_stack": [
-                "Python",
-                "Computer Vision",
-                "Deep Learning",
-                "AI"
+                "React",
+                "TypeScript",
+                "FastAPI",
+                "PostgreSQL",
+                "PydanticAI",
+                "Ollama",
+                "Gemini API"
             ],
             "images": [
                 "/images/projects/hair-ai.png"
             ],
-            "description": "AI-powered application for hair analysis and styling recommendations using computer vision and deep learning.",
+            "description": "HAIR (Human AI Resources) is an AI-powered recruitment platform designed to modernize and streamline the hiring process. It combines large language models, semantic search, structured parsing, and multi-agent AI systems to reduce manual effort, improve candidate-job matching, and enable data-driven hiring decisions. Key features include Resume Parsing Engine, AI Job Description Generator, Semantic Candidate Matching, Conversational AI Assistant, and multiagent system AI Interviewer.",
             "project_url": "https://github.com/CharbelDaher34/hair-AI"
         }
     ],
     "certifications": [
         {
-            "name": "IBM Full Stack Software Developer",
+            "name": "MCP: Build Rich-Context AI Apps with Anthropic",
+            "logo": "/images/logos/deeplearning-ai.png",
+            "certificate_photo": "/images/certifications/mcp-anthropic.png",
+            "url": "https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/"
+        },
+        {
+            "name": "Post-training of LLMs",
+            "logo": "/images/logos/deeplearning-ai.png",
+            "certificate_photo": "/images/certifications/post-training-llms.png",
+            "url": "https://www.deeplearning.ai/short-courses/post-training-of-llms/"
+        },
+        {
+            "name": "Reinforcement Fine-Tuning LLMs With GRPO",
+            "logo": "/images/logos/deeplearning-ai.png",
+            "certificate_photo": "/images/certifications/rft-llms-grpo.png",
+            "url": "https://www.deeplearning.ai/courses/reinforcement-fine-tuning-llms-with-grpo/"
+        },
+        {
+            "name": "Building Machine Learning Systems",
+            "logo": "/images/logos/machine-learning-school.png",
+            "certificate_photo": "/images/certifications/building-ml-systems.png",
+            "url": "https://www.ml.school/"
+        },
+        {
+            "name": "IBM Full Stack Software Developer Specialization",
             "logo": "/images/logos/ibm.png",
             "certificate_photo": "/images/certifications/ibm-fullstack.png",
             "url": "https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer"
+        },
+        {
+            "name": "Artificial Intelligence Bootcamp",
+            "logo": "/images/logos/zaka.png",
+            "certificate_photo": "/images/certifications/zaka-ai-bootcamp.png",
+            "url": "https://zaka.ai/artificial-intelligence-bootcamp/"
+        },
+        {
+            "name": "Python for Everybody Specialization",
+            "logo": "/images/logos/university-of-michigan.png",
+            "certificate_photo": "/images/certifications/python-for-everybody.png",
+            "url": "https://www.coursera.org/specializations/python"
+        },
+        {
+            "name": "DeepLearning.AI TensorFlow Developer Specialization",
+            "logo": "/images/logos/deeplearning-ai.png",
+            "certificate_photo": "/images/certifications/tensorflow-developer.png",
+            "url": "https://www.coursera.org/professional-certificates/tensorflow-developer"
+        },
+        {
+            "name": "Deep Learning Specialization",
+            "logo": "/images/logos/deeplearning-ai.png",
+            "certificate_photo": "/images/certifications/deep-learning-specialization.png",
+            "url": "https://www.coursera.org/specializations/deep-learning"
+        },
+        {
+            "name": "Applied Data Science with Python Specialization",
+            "logo": "/images/logos/university-of-michigan.png",
+            "certificate_photo": "/images/certifications/applied-data-science-python.png",
+            "url": "https://www.coursera.org/specializations/data-science-python"
+        },
+        {
+            "name": "Google Data Analytics Specialization",
+            "logo": "/images/logos/coursera.png",
+            "certificate_photo": "/images/certifications/google-data-analytics.png",
+            "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
         }
     ]
 }

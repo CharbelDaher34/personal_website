@@ -17,7 +17,7 @@ export function HeroSection() {
       </div>
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
+        <div className="flex flex-col items-center text-center space-y-8 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -32,9 +32,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight whitespace-nowrap"
           >
-            Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-pink-400 animate-gradient-x">Intelligence</span> into the Web
+            Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-pink-400 animate-gradient-x">Intelligent</span> Software
           </motion.h1>
 
           <motion.p
