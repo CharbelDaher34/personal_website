@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export function CertificationsList({ certifications }: { certifications: Certification[] }) {
     return (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
             {certifications.map((cert, index) => (
                 <motion.div
                     key={index}
@@ -24,7 +24,7 @@ export function CertificationsList({ certifications }: { certifications: Certifi
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                         {/* Certificate Image Area */}
-                        <div className="relative h-48 w-full overflow-hidden bg-black/40">
+                        <div className="relative h-72 w-full overflow-hidden bg-black/40">
                             {cert.certificate_photo ? (
                                 <>
                                     {/* Blur Background */}
@@ -41,7 +41,7 @@ export function CertificationsList({ certifications }: { certifications: Certifi
                                         src={cert.certificate_photo}
                                         alt={cert.name}
                                         fill
-                                        className="object-contain p-4 transition-transform duration-700 group-hover:scale-105"
+                                        className="object-contain p-6 transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </>
                             ) : (
@@ -56,31 +56,31 @@ export function CertificationsList({ certifications }: { certifications: Certifi
                                     <Link
                                         href={cert.url}
                                         target="_blank"
-                                        className="inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white backdrop-blur-md transition-all hover:bg-white/20 hover:scale-105"
+                                        className="inline-flex items-center gap-2 rounded-full bg-white/10 px-8 py-3 text-base font-medium text-white backdrop-blur-md transition-all hover:bg-white/20 hover:scale-105"
                                     >
-                                        Verify Credential <ExternalLink className="h-4 w-4" />
+                                        Open it <ExternalLink className="h-5 w-5" />
                                     </Link>
                                 )}
                             </div>
                         </div>
 
-                        <CardHeader className="relative space-y-4 p-6">
-                            <div className="flex items-start justify-between gap-4">
-                                <div className="space-y-1">
-                                    <CardTitle className="text-lg font-bold leading-tight text-white transition-colors group-hover:text-primary">
+                        <CardHeader className="relative space-y-4 p-8">
+                            <div className="flex items-start justify-between gap-6">
+                                <div className="space-y-2 flex-1">
+                                    <CardTitle className="text-xl font-bold leading-tight text-white transition-colors group-hover:text-primary">
                                         {cert.name}
                                     </CardTitle>
-                                    <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                                    <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
                                         Certification
                                     </p>
                                 </div>
                                 {cert.logo && (
-                                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5 p-1.5 shadow-inner">
+                                    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5 p-2 shadow-inner">
                                         <Image
                                             src={cert.logo}
                                             alt="Issuer Logo"
                                             fill
-                                            className="object-contain"
+                                            className="object-cover"
                                         />
                                     </div>
                                 )}

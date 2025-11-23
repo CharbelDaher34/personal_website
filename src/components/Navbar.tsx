@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -74,10 +74,10 @@ export function Navbar() {
                     ))}
                 </div>
 
-                <div className="hidden md:block">
-                    <Button asChild size="sm" className="rounded-full px-6 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20">
-                        <Link href="/contact">Freelance Services</Link>
-                    </Button>
+                <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <span className="text-xs text-muted-foreground">Powered by</span>
+                    <span className="text-xs font-semibold text-white">Google's Antigravity</span>
+                    <Heart className="h-3 w-3 fill-red-500 text-red-500" />
                 </div>
 
                 {/* Mobile Nav Toggle */}
@@ -115,9 +115,6 @@ export function Navbar() {
                                     {item.name}
                                 </Link>
                             ))}
-                            <Button asChild className="mt-2 w-full rounded-xl bg-primary hover:bg-primary/90">
-                                <Link href="/contact" onClick={() => setIsOpen(false)}>Freelance Services</Link>
-                            </Button>
                         </motion.div>
                     )}
                 </AnimatePresence>

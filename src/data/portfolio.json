@@ -6,7 +6,7 @@
         "linkedin": "https://www.linkedin.com/in/charbeldaher34/",
         "github": "https://github.com/CharbelDaher34",
         "role": "AI Engineer",
-        "bio": "I'm Charbel Daher, an AI Engineer. I build accessible, pixel-perfect, performant, and web experiences.",
+        "bio": "My journey into technology began at university, where I started with absolutely no prior coding knowledge. During my first year, I discovered my passion for programming and quickly dove deep into the world of Artificial Intelligence. I started by taking courses on Coursera, specifically from DeepLearning.AI, which laid the foundation for my understanding of machine learning and neural networks.\n\nTo solidify my knowledge, I adopted a hands-on approach, building numerous projects that challenged me to apply what I was learning. This practical experience proved invaluable as I transitioned into professional roles, starting with internships where I honed my skills in real-world environments.\n\nSince then, I have been on a continuous path of learning and growth. I am constantly exploring new technologies, refining my craft, and pushing the boundaries of what I can build. Today, as an AI Engineer, I combine that initial spark of curiosity with years of dedicated practice to create intelligent, efficient, and impactful software solutions.",
         "location": "Beirut, Lebanon",
         "profile_photo": "/images/profile.webp",
         "cv_url": "/cv.pdf"
@@ -220,11 +220,11 @@
             "name": "Reinforcement Fine-Tuning LLMs With GRPO",
             "logo": "/images/logos/deeplearning-ai.png",
             "certificate_photo": "/images/certifications/rft-llms-grpo.png",
-            "url": "https://www.deeplearning.ai/courses/reinforcement-fine-tuning-llms-with-grpo/"
+            "url": "https://www.deeplearning.ai/short-courses/reinforcement-fine-tuning-llms-grpo/"
         },
         {
             "name": "Building Machine Learning Systems",
-            "logo": "/images/logos/machine-learning-school.png",
+            "logo": "/images/logos/mlschool.png",
             "certificate_photo": "/images/certifications/building-ml-systems.png",
             "url": "https://www.ml.school/"
         },
@@ -250,13 +250,13 @@
             "name": "DeepLearning.AI TensorFlow Developer Specialization",
             "logo": "/images/logos/deeplearning-ai.png",
             "certificate_photo": "/images/certifications/tensorflow-developer.png",
-            "url": "https://www.coursera.org/professional-certificates/tensorflow-developer"
+            "url": "https://www.deeplearning.ai/courses/tensorflow-developer-professional-certificate/"
         },
         {
             "name": "Deep Learning Specialization",
             "logo": "/images/logos/deeplearning-ai.png",
             "certificate_photo": "/images/certifications/deep-learning-specialization.png",
-            "url": "https://www.coursera.org/specializations/deep-learning"
+            "url": "https://www.deeplearning.ai/courses/deep-learning-specialization/"
         },
         {
             "name": "Applied Data Science with Python Specialization",
@@ -266,9 +266,26 @@
         },
         {
             "name": "Google Data Analytics Specialization",
-            "logo": "/images/logos/coursera.png",
+            "logo": "/images/logos/google.png",
             "certificate_photo": "/images/certifications/google-data-analytics.png",
             "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
+        }
+    ],
+    "services": [
+        {
+            "title": "1-on-1 Consultation",
+            "description": "Personalized guidance on AI strategy, career development, or technical problem-solving. Get expert advice tailored to your specific needs.",
+            "icon": "Users"
+        },
+        {
+            "title": "AI, ML & Data Projects",
+            "description": "End-to-end development of intelligent systems. From data collection and processing to model training and deployment.",
+            "icon": "Brain"
+        },
+        {
+            "title": "Backend Python Development",
+            "description": "Robust and scalable backend solutions using Python FastAPI. specialized in high-performance APIs and microservices.",
+            "icon": "Terminal"
         }
     ]
 }

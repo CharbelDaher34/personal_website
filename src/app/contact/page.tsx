@@ -6,11 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 import portfolioData from "@/data/portfolio.json";
 
 export default function ContactPage() {
-    const { email, phone, location } = portfolioData.personalInfo;
+    const { email, location } = portfolioData.personalInfo;
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -79,15 +79,7 @@ export default function ContactPage() {
                             </CardHeader>
                         </Card>
 
-                        <Card>
-                            <CardHeader>
-                                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
-                                    <Phone className="h-5 w-5 text-primary" />
-                                </div>
-                                <CardTitle className="text-lg">Phone</CardTitle>
-                                <CardDescription>{phone}</CardDescription>
-                            </CardHeader>
-                        </Card>
+
 
                         <Card>
                             <CardHeader>
