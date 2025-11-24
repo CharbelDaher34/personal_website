@@ -18,7 +18,7 @@ export function HeroSection() {
 
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center space-y-8 max-w-6xl mx-auto">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -26,7 +26,7 @@ export function HeroSection() {
           >
             <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
             Available for new projects
-          </motion.div>
+          </motion.div> */}
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
