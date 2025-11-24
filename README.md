@@ -1,11 +1,11 @@
 # Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Sanity CMS.
+A modern, responsive personal portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and local JSON data.
 
 ## ✨ Features
 
 - **Modern Design**: Beautiful, responsive design with vibrant colors and smooth animations
-- **CMS-Powered**: Easy content management with Sanity CMS (currently uses mock data)
+- **Data Driven**: Content managed via a local JSON file for easy updates
 - **Fully Responsive**: Works perfectly on all devices
 - **Dark Mode Ready**: Includes dark mode support
 - **SEO Optimized**: Proper meta tags and semantic HTML
@@ -18,7 +18,7 @@ A modern, responsive personal portfolio website built with Next.js 14, TypeScrip
 - **Experience**: Work experience timeline
 - **Education**: Educational background
 - **Projects**: Portfolio of projects with detailed pages
-- **Services**: Services offered with pricing
+- **Certifications**: Professional certifications and achievements
 - **Contact**: Contact form and information
 
 ## 🚀 Getting Started
@@ -59,7 +59,7 @@ npm run dev
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **CMS**: [Sanity](https://www.sanity.io/) (optional)
+- **Email**: [Resend](https://resend.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Markdown**: [react-markdown](https://github.com/remarkjs/react-markdown)
 - **Carousel**: [react-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
@@ -71,26 +71,34 @@ npm run dev
 ├── src/
 │   ├── app/                    # Next.js app router pages
 │   │   ├── about/
+│   │   ├── api/               # API routes
+│   │   ├── certifications/
 │   │   ├── contact/
 │   │   ├── education/
 │   │   ├── experience/
 │   │   ├── projects/
 │   │   │   └── [slug]/        # Dynamic project pages
-│   │   ├── services/
 │   │   ├── layout.tsx
 │   │   ├── page.tsx           # Home page
 │   │   └── globals.css
 │   ├── components/            # Reusable components
 │   │   ├── ui/               # shadcn components
+│   │   ├── CertificationsList.tsx
+│   │   ├── EducationList.tsx
+│   │   ├── ExperienceList.tsx
+│   │   ├── FeaturedProjectsSection.tsx
 │   │   ├── Footer.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── ImageCarousel.tsx
+│   │   ├── MarkdownRenderer.tsx
 │   │   ├── Navbar.tsx
 │   │   ├── ProjectCard.tsx
+│   │   ├── ProjectsList.tsx
 │   │   ├── ServiceCard.tsx
-│   │   └── MarkdownRenderer.tsx
+│   │   └── ServicesSection.tsx
+│   ├── data/                  # Data source
+│   │   └── portfolio.json     # Portfolio content
 │   └── lib/                   # Utilities
-│       ├── mockData.ts        # Mock data for development
-│       ├── queries.ts         # Sanity queries
-│       ├── sanityClient.ts    # Sanity client setup
 │       └── utils.ts
 ├── public/                    # Static assets
 └── package.json
@@ -98,23 +106,26 @@ npm run dev
 
 ## 🎨 Customization
 
-### Using Mock Data (Current Setup)
+### Managing Content
 
-The site currently uses mock data from `src/lib/mockData.ts`. You can edit this file to customize:
-- About section content
-- Work experience
+All content is managed through a single JSON file located at `src/data/portfolio.json`. You can edit this file to customize:
+- Personal Information & Bio
+- Work Experience
 - Education
 - Projects
 - Services
+- Certifications
 
-### Connecting to Sanity CMS
+### Email Configuration
 
-To use real CMS data:
+To enable the contact form:
 
-1. Create a Sanity project at [sanity.io](https://www.sanity.io/)
-2. Set up your Sanity schema based on the data models in the requirements
-3. Update `.env.local` with your Sanity credentials
-4. Replace mock data imports with actual Sanity queries
+1. Create an account at [Resend](https://resend.com/)
+2. Get your API Key
+3. Add it to `.env.local`:
+   ```bash
+   RESEND_API_KEY=your_api_key_here
+   ```
 
 ### Styling
 
@@ -170,9 +181,9 @@ Contributions, issues, and feature requests are welcome!
 
 ## 👤 Author
 
-**Alex Doe**
-- Website: [your-website.com](https://your-website.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
+**Charbel Daher**
+- Website: [personal-website-charbel.vercel.app](https://personal-website-charbel.vercel.app/)
+- GitHub: [@CharbelDaher34](https://github.com/CharbelDaher34)
 
 ---
 

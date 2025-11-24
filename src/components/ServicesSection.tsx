@@ -88,7 +88,7 @@ export function ServicesSection({ services }: { services: Service[] }) {
                 >
                     <Button asChild size="lg" className="group bg-primary text-primary-foreground hover:bg-primary/90">
                         <Link href="/contact">
-                            Start a Project <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            Contact Me <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </Button>
                 </motion.div>
