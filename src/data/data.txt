@@ -1,0 +1,23 @@
+,
+        {
+            "title": "HAIR – Human AI Resources",
+            "slug": {
+                "current": "hair-ai"
+            },
+            "short_summary": "An AI-powered recruitment platform designed to modernize and streamline the hiring process using LLMs, semantic search, and multi-agent systems.",
+            "featured": true,
+            "tech_stack": [
+                "React",
+                "TypeScript",
+                "FastAPI",
+                "PostgreSQL",
+                "PydanticAI",
+                "Ollama",
+                "Gemini API"
+            ],
+            "images": [
+                "/images/projects/hair-ai.png"
+            ],
+            "description": "HAIR (Human AI Resources) is an AI-powered recruitment platform designed to modernize and streamline the hiring process. It combines large language models, semantic search, structured parsing, and multi-agent AI systems to reduce manual effort, improve candidate-job matching, and enable data-driven hiring decisions. Key features include Resume Parsing Engine, AI Job Description Generator, Semantic Candidate Matching, Conversational AI Assistant, and multiagent system AI Interviewer.",
+            "project_url": "https://github.com/CharbelDaher34/hair-AI"
+        }
